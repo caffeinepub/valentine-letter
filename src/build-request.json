@@ -1,0 +1,96 @@
+{
+  "kind": "build_request",
+  "title": "Interactive Valentine Letter single-page experience",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page Valentine Letter UI that initially shows an envelope element with the label “Click to Open 💌”, and on click hides the envelope and reveals the letter content.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "<div id=\"envelope\">Click to Open 💌</div>\n\n<div id=\"letter\">",
+          "document.getElementById(\"envelope\").onclick = function() {\n    this.style.display = \"none\";\n    document.getElementById(\"letter\").style.display = \"block\";\n  }"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On initial load, the envelope is visible and the letter is not visible.",
+        "Clicking/tapping the envelope hides the envelope and shows the letter without a page reload.",
+        "The interaction works with both mouse and touch input."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Render the letter text exactly as provided (line-by-line paragraphs), in English, using a styled card layout that matches the original intent (soft pink page background, white letter card, readable text).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "<p>I know you said you didn’t want me buying you anything,</p>\n  <p>so I wanted to write this instead, because it actually comes from me.</p>\n  <p>Since we met on November 13th and started dating on New Year’s, you’ve truly become</p>\n  <p>someone incredibly special to me. You make me laugh, brighten my days, and I honestly</p>\n  <p>just enjoy every single moment I get to spend with you.</p>\n  <p>I appreciate you, I appreciate us, and I’m so glad you’re mine.</p>\n  <p>Happy Valentine’s Day, bae ❤️</p>\n  <p>From Batman, aka the king, aka Raaji</p>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All paragraphs appear in the same order as the provided HTML.",
+        "The letter container is visually distinct from the page background (card styling with padding and rounded corners).",
+        "Text is readable on both mobile and desktop (no horizontal overflow)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the envelope and letter styling using Tailwind CSS (or existing Tailwind setup) to approximate the provided CSS: centered layout, soft pink background, envelope card with rounded corners and subtle shadow, and letter card with subtle shadow.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "background: #ffe6e6;",
+          "background: #f77;",
+          "border-radius: 15px;",
+          "box-shadow: 0 4px 6px rgba(0,0,0,0.2);"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page background is a light pink tone.",
+        "The envelope element appears as a centered clickable card with rounded corners and a shadow.",
+        "The letter card has a white background, rounded corners, and a shadow similar to the envelope."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a cohesive, creative visual theme (colors, typography, spacing, and micro-interactions) appropriate for a Valentine letter, and enforce it consistently across the page without adding new product features.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "<title>Valentine Letter</title>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The UI uses a consistent color palette and typography (not default browser styling).",
+        "Interactive states are present (e.g., hover/active/focus styling on the envelope element).",
+        "The theme does not rely on blue/purple as primary colors."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must remain a single-page experience (no multi-page routing required for this request).",
+    "Do not modify any files under frontend/src/components/ui or any other immutable paths listed in SYSTEM_CONTEXT; compose and use them if needed instead."
+  ],
+  "nonGoals": [
+    "Internet Identity authentication.",
+    "Persisting the letter or click state to the backend.",
+    "Multiple letters, editing, sharing, or messaging features."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

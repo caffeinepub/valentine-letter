@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a simple interactive Valentine Letter web page (HTML/CSS/JS) where clicking an envelope reveals a heartfelt letter.",
+  "architectural_notes": [
+    "Single static HTML page with embedded CSS and vanilla JS for click-to-reveal interaction."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-valentine-letter-ui-that-initially-shows-an-envelope-element-with-the-label-click-to-open-and-on-click-hides-the-envelope-and-reveals-the-letter-content",
+      "title": "Create a single-page Valentine Letter UI that initially shows an envelope element with the label “Click to Open 💌”, and on click hides the envelope and reveals the letter content.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-letter-text-exactly-as-provided-line-by-line-paragraphs-in-english-using-a-styled-card-layout-that-matches-the-original-intent-soft-pink-page-background-white-letter-card-readable-text",
+      "title": "Render the letter text exactly as provided (line-by-line paragraphs), in English, using a styled card layout that matches the original intent (soft pink page background, white letter card, readable text).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-envelope-and-letter-styling-using-tailwind-css-or-existing-tailwind-setup-to-approximate-the-provided-css-centered-layout-soft-pink-background-envelope-card-with-rounded-corners-and-subtle-shadow-and-letter-card-with-subtle-shadow",
+      "title": "Implement the envelope and letter styling using Tailwind CSS (or existing Tailwind setup) to approximate the provided CSS: centered layout, soft pink background, envelope card with rounded corners and subtle shadow, and letter card with subtle shadow.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-creative-visual-theme-colors-typography-spacing-and-micro-interactions-appropriate-for-a-valentine-letter-and-enforce-it-consistently-across-the-page-without-adding-new-product-features",
+      "title": "Apply a cohesive, creative visual theme (colors, typography, spacing, and micro-interactions) appropriate for a Valentine letter, and enforce it consistently across the page without adding new product features.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Valentine Letter single-page site with an envelope element that hides on click and reveals a styled letter message.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Valentine Letter",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

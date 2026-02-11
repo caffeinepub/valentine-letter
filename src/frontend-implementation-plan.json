@@ -1,0 +1,91 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Interactive Valentine Letter single-page experience",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement single-page envelope-to-letter reveal interaction (click/tap) without routing or reloads.",
+      "acceptanceCriteria": [
+        "On initial load, the envelope is visible and the letter is not visible.",
+        "Clicking/tapping the envelope hides the envelope and shows the letter without a page reload.",
+        "The interaction works with both mouse and touch input."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page Valentine Letter view with local UI state controlling envelope visibility vs. letter visibility; ensure the envelope control is accessible (keyboard focusable) and uses click/tap friendly handlers (React onClick)."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Verify the app renders the new single-page App component as the only experience (no routing added) and that the envelope-to-letter state change occurs without navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Render the provided letter text exactly (line-by-line paragraphs) inside a readable, card-styled layout.",
+      "acceptanceCriteria": [
+        "All paragraphs appear in the same order as the provided HTML.",
+        "The letter container is visually distinct from the page background (card styling with padding and rounded corners).",
+        "Text is readable on both mobile and desktop (no horizontal overflow)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add the letter content as explicit paragraph elements in the exact provided order and wording; wrap content in a white card container with responsive max width and spacing to avoid horizontal overflow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Use Tailwind CSS styling to approximate the original centered layout, soft pink background, and card shadows/rounded corners for envelope and letter.",
+      "acceptanceCriteria": [
+        "The page background is a light pink tone.",
+        "The envelope element appears as a centered clickable card with rounded corners and a shadow.",
+        "The letter card has a white background, rounded corners, and a shadow similar to the envelope."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply Tailwind utility classes for centered layout, light pink page background, envelope card styling (rounded corners + subtle shadow), and letter card styling (white background + rounded corners + shadow)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Optionally extend Tailwind theme tokens (e.g., custom rose/pink background/shadow values) to better match the provided CSS colors (#ffe6e6, #f77) while keeping the styling consistent and reusable across the page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive Valentine-themed visual system (typography, spacing, palette, and micro-interactions) consistently without adding new features.",
+      "acceptanceCriteria": [
+        "The UI uses a consistent color palette and typography (not default browser styling).",
+        "Interactive states are present (e.g., hover/active/focus styling on the envelope element).",
+        "The theme does not rely on blue/purple as primary colors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles for a cohesive theme (font smoothing, base typography, and consistent background/foreground defaults) that complement Tailwind; ensure the overall palette is rose/pink/neutral and avoids blue/purple primaries."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add Valentine-appropriate micro-interactions using Tailwind states (hover/active/focus-visible), consistent spacing/typography choices, and a cohesive palette across envelope and letter elements."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Adjust document-level presentation if needed for the theme (e.g., ensure the title remains 'Valentine Letter' and optionally include a non-blue/purple typography choice) while keeping the experience single-page."
+        }
+      ]
+    }
+  ]
+}

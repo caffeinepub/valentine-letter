@@ -1,2 +1,3 @@
-# valentine-letter
-Exported from Caffeine project: Valentine Letter
+## Valentine Letter
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

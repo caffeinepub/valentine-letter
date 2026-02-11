@@ -1,0 +1,6 @@
+{
+  "frontend/src/App.tsx": "Single-page Valentine Letter component with envelope-to-letter reveal interaction using local state, featuring romantic styling with hearts, smooth animations, and the exact letter text from the user's request.",
+  "frontend/src/index.css": "Global styles with Valentine-themed OKLCH color system (rose/pink palette), custom Google Fonts (Crimson Pro for headings, Inter for body), and fade-in animation keyframes.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with custom rose and pink color scales in OKLCH format, custom font families, enhanced shadows, and Valentine-appropriate design tokens.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this client-side-only Valentine Letter application."
+}

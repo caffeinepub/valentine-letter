@@ -1,0 +1,81 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-valentine-letter-ui-that-initially-shows-an-envelope-element-with-the-label-click-to-open-and-on-click-hides-the-envelope-and-reveals-the-letter-content",
+      "featureTitle": "Create a single-page Valentine Letter UI that initially shows an envelope element with the label “Click to Open 💌”, and on click hides the envelope and reveals the letter content.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-letter-text-exactly-as-provided-line-by-line-paragraphs-in-english-using-a-styled-card-layout-that-matches-the-original-intent-soft-pink-page-background-white-letter-card-readable-text",
+      "featureTitle": "Render the letter text exactly as provided (line-by-line paragraphs), in English, using a styled card layout that matches the original intent (soft pink page background, white letter card, readable text).",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-envelope-and-letter-styling-using-tailwind-css-or-existing-tailwind-setup-to-approximate-the-provided-css-centered-layout-soft-pink-background-envelope-card-with-rounded-corners-and-subtle-shadow-and-letter-card-with-subtle-shadow",
+      "featureTitle": "Implement the envelope and letter styling using Tailwind CSS (or existing Tailwind setup) to approximate the provided CSS: centered layout, soft pink background, envelope card with rounded corners and subtle shadow, and letter card with subtle shadow.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-creative-visual-theme-colors-typography-spacing-and-micro-interactions-appropriate-for-a-valentine-letter-and-enforce-it-consistently-across-the-page-without-adding-new-product-features",
+      "featureTitle": "Apply a cohesive, creative visual theme (colors, typography, spacing, and micro-interactions) appropriate for a Valentine letter, and enforce it consistently across the page without adding new product features.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
